@@ -5,7 +5,10 @@ import TextInput from '../TextInput/TextInput';
 
 const ColumnForm = props => {
     const [title, setTitle] = useState('');
-    const [icon, setIcon] = useState('');
+    let [icon, setIcon] = useState('');
+
+    icon = icon.toLowerCase();
+    console.log(icon);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -13,6 +16,7 @@ const ColumnForm = props => {
         setTitle('');
         setIcon('');
     }
+    
 	return (
         <form className={styles.columnForm} onSubmit={handleSubmit}>
             Title: <TextInput value={title} onChange={e => setTitle(e.target.value)} />
