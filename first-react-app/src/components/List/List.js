@@ -38,6 +38,17 @@ const List = () => {
     const addColumn = newColumn => {
         setColumns([...columns, { id: shortid() , title: newColumn.title, icon: newColumn.icon, cards:[] }]);
     };
+
+    const addCards = (newCard, columnId) => {
+        const columnsUpdated = columns.map(column =>{
+            if (column.id === columnId)
+                return { ...column, cards: [...column.cards, { id: shortid(), title: newCard.title }]}
+            else
+                return column
+        })
+        setColumns(columnsUpdated);
+    };
+
     return (
       <div>
           <header className={styles.header}>
@@ -45,7 +56,16 @@ const List = () => {
           </header>
           <p className={styles.description}>Interesting things I want to check out</p>
           <section className={styles.columns}>
-            {columns.map(column => <Column key={column.id} id={column.id} title={column.title} icon={column.icon} cards={column.cards} />)}
+            {columns.map(column => 
+                <Column 
+                key={column.id} 
+                id={column.id} 
+                title={column.title} 
+                icon={column.icon} 
+                cards={column.cards} 
+                action={addCards} 
+                />
+            )}
           </section>
           <ColumnForm action={addColumn} />
       </div>

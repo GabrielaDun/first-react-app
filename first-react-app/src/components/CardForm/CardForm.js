@@ -1,0 +1,23 @@
+import styles from './CardForm.module.scss';
+import { useState } from 'react';
+import Button from '../Button/Button';
+import TextInput from '../TextInput/TextInput';
+
+const CardForm = props => {
+    console.log('cardForm', props);
+    const [title, setTitle] = useState('');
+    
+    const handleSubmit = e => {
+        e.preventDefault();
+        props.action({ title: title }, props.columnId);
+        setTitle('');
+    }
+	return (
+        <form className={styles.columnForm} onSubmit={handleSubmit}>
+            <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+            <Button>ADD CARD</Button>
+        </form>
+	);
+};
+
+export default CardForm;
