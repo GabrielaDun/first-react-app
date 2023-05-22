@@ -8,7 +8,6 @@ const ColumnForm = props => {
     let [icon, setIcon] = useState('');
 
     icon = icon.toLowerCase();
-    console.log(icon);
 
     const handleSubmit = e => {
         e.preventDefault();

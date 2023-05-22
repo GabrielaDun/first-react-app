@@ -4,7 +4,6 @@ import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 
 const CardForm = props => {
-    console.log('cardForm', props);
     const [title, setTitle] = useState('');
     
     const handleSubmit = e => {

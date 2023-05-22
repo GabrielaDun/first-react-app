@@ -4,7 +4,6 @@ import CardForm from '../CardForm/CardForm';
 //import shortid from 'shortid';
 
 const Column = props => {
-    console.log(props);
     return (
         <article className={styles.column}>
             <h2 className={styles.title} title ={props.title}>

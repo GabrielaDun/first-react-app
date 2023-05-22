@@ -36,13 +36,19 @@ const List = () => {
     ]);
 
     const addColumn = newColumn => {
-        setColumns([...columns, { id: shortid() , title: newColumn.title, icon: newColumn.icon, cards:[] }]);
+        setColumns([...columns, 
+            { id: shortid() , 
+            title: newColumn.title, 
+            icon: newColumn.icon, 
+            cards:[] }
+        ]);
     };
 
     const addCards = (newCard, columnId) => {
         const columnsUpdated = columns.map(column =>{
             if (column.id === columnId)
-                return { ...column, cards: [...column.cards, { id: shortid(), title: newCard.title }]}
+                return { ...column, 
+                    cards: [...column.cards, { id: shortid(), title: newCard.title }]}
             else
                 return column
         })
@@ -54,7 +60,9 @@ const List = () => {
           <header className={styles.header}>
               <h2 className={styles.title}>Things to do<span>soon!</span></h2>
           </header>
-          <p className={styles.description}>Interesting things I want to check out</p>
+          <p className={styles.description}>
+            Interesting things I want to check out
+          </p>
           <section className={styles.columns}>
             {columns.map(column => 
                 <Column 
