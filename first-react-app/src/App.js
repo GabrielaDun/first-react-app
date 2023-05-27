@@ -10,7 +10,7 @@ const App = () => {
         <Hero />
         <SearchForm />
         <List />
-      </Container>
+      </Container> 
     </div>
   );
 }
