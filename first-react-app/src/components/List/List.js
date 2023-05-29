@@ -1,7 +1,6 @@
 import Column from '../Column/Column';
 import styles from './List.module.scss';
 //import { useState } from 'react';
-import shortid from 'shortid';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import { useSelector } from 'react-redux';
 
@@ -60,6 +59,7 @@ const List = () => {
     
 
     const columns = useSelector(state => state.columns);
+    console.log(columns);
     return (
         <div className={styles.list}>
           <header className={styles.header}>
