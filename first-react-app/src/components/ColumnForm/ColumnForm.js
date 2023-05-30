@@ -5,7 +5,7 @@ import TextInput from '../TextInput/TextInput';
 import { useDispatch } from 'react-redux';
 
 
-const ColumnForm = props => {
+const ColumnForm = () => {
     const dispatch = useDispatch();
     const [title, setTitle] = useState('');
     let [icon, setIcon] = useState('');

@@ -4,7 +4,12 @@ import CardForm from '../CardForm/CardForm';
 import { useSelector } from 'react-redux';
 
 const Column = props => {
-    const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id));
+    const phase = useSelector(state => state.searchFraze.searchFraze);
+    console.log(phase);
+
+    const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id && card.title.includes(phase)));
+    console.log(cards);
+
     return (
         <article className={styles.column}>
             <h2 className={styles.title} title ={props.title}>
