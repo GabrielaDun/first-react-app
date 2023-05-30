@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 import { useDispatch } from 'react-redux';
-import shortid from 'shortid';
 
 
 const ColumnForm = props => {
@@ -15,7 +14,7 @@ const ColumnForm = props => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({type: 'ADD_COLUMN', newColumn: {id:shortid, title, icon}});
+        dispatch({type: 'ADD_COLUMN', payload: {title, icon}});
         setTitle('');
         setIcon('');
     }
