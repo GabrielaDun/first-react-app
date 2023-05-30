@@ -8,22 +8,19 @@ import initialState from '../../redux/initialState';
 
 const SearchForm = () => {
     const dispatch = useDispatch();
-    let [searchFraze, setsearchFraze] = useState('');
-    console.log(searchFraze);
-    searchFraze = searchFraze.toLowerCase();
+    let [searchString, setsearchString] = useState('');
 
     const handleSubmit = e => {
-        searchFraze = searchFraze.toLowerCase();
-        console.log(searchFraze);
+        console.log(searchString);
         e.preventDefault();
-        dispatch({type: 'ADD_SEARCH_FRAZE', payload: {searchFraze}});
-        setsearchFraze('');
+        dispatch({type: 'ADD_SEARCH_FRAZE', payload: (searchString)});
+        setsearchString('');
     }
     console.log(initialState);
     
     return (
         <form className={styles.searchForm} onSubmit={handleSubmit}>
-            <TextInput placeholder="Search..."  value={searchFraze} onChange={e => setsearchFraze(e.target.value)}/>
+            <TextInput placeholder="Search..."  value={searchString} onChange={e => setsearchString(e.target.value)}/>
             <Button> 
                 <span className="fa fa-search" />
             </Button>
