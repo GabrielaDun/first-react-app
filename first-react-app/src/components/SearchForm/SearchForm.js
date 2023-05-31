@@ -5,6 +5,7 @@ import Button from '../Button/Button';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import initialState from '../../redux/initialState';
+import { addSearchFraze } from '../../redux/store';
 
 const SearchForm = () => {
     const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const SearchForm = () => {
     const handleSubmit = e => {
         console.log(searchString);
         e.preventDefault();
-        dispatch({type: 'ADD_SEARCH_FRAZE', payload: (searchString)});
+        dispatch(addSearchFraze (searchString));
         setsearchString('');
     }
     console.log(initialState);
