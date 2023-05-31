@@ -1,9 +1,10 @@
-import styles from './Favorite.module.scss'
 
-const Favorite= () => {
+import PageTitle from '../PageTitle/PageTitle.js';
+
+const Favorite = () => {
     return (
-        <div className={styles.favorite}>
-            <PageTitle>MY FIRST REACT APP</PageTitle>
+        <div>
+            <PageTitle>FAVORITE</PageTitle>
         </div>
     )
 
