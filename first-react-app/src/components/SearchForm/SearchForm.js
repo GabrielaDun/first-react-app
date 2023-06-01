@@ -15,7 +15,7 @@ const SearchForm = () => {
         console.log(searchString);
         e.preventDefault();
         dispatch(addSearchFraze (searchString));
-        setsearchString('');
+        //setsearchString('');
     }
     console.log(initialState);
     
