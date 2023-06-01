@@ -2,12 +2,12 @@ const initialState = {
 
   lists: [
       {
-        id: 1,
+        id: '1',
         title: 'Things to do...',
         description: 'Interesting things I want to check out'
       },
       {
-        id: 2,
+        id: '2',
         title: 'Places to see...',
         description: 'Interesting places that I want to visit'
       }
@@ -17,25 +17,25 @@ const initialState = {
       id: 1,
       title: 'Books',
       icon: 'book',
-      listId: 1,
+      listId: '1',
     },
     {
       id: 2,
       title: 'Movies',
       icon: 'film',
-      listId: 1,
+      listId: '1',
     },
     {
       id: 3,
       title: 'Games',
       icon: 'gamepad',
-      listId: 1,
+      listId: '1',
     },
     {
       id: 4,
       title: 'Asian destrinations',
       icon: 'plane',
-      listId: 2,
+      listId: '2',
     }
   ],
   

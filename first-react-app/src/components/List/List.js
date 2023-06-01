@@ -2,22 +2,18 @@ import Column from '../Column/Column';
 import styles from './List.module.scss';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import { useSelector } from 'react-redux';
-import { getAllColumns, getColumnsById, getListById } from '../../redux/store';
+import { getColumnsById, getListById } from '../../redux/store';
+import { useParams } from 'react-router';
 
 
 const List = () => {
+    const { listId } = useParams();
 
-    
-    const column = useSelector(getAllColumns);
-    console.log(column);
+    const listData = useSelector(state => getListById(state, listId));
+    console.log(listData);
 
-    const listData = useSelector(state => getListById(state, 1));
+    const columns = useSelector(state => getColumnsById (state, listId));
 
-    
-    const columns = useSelector(state => getColumnsById (state, 1));
-    console.log(columns);
-
-    
 
     return (
         <div className={styles.list}>
