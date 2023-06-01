@@ -8,8 +8,8 @@ const initialState = {
       },
       {
         id: 2,
-        title: 'Places to visit',
-        description: 'Interesting places that I want to check out'
+        title: 'Places to see...',
+        description: 'Interesting places that I want to visit'
       }
   ],
   columns: [
