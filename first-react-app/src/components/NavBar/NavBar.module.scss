@@ -18,13 +18,17 @@
     }
     .titles {
         display: flex;
-        flex-direction: row;
         margin-right: 20px;
-        a {
-            display: flex;
-            color: white;
+        list-style-type: none;
+        li {
             padding: 10px;
-            text-decoration: none;
+            .linkActive {
+                color: $color-warning;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
     }
 }
