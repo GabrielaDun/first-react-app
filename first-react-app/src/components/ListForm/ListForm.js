@@ -3,16 +3,13 @@ import { useState } from 'react';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 import { useDispatch } from 'react-redux';
-import { addColumn, addList } from '../../redux/store';
-import { useParams } from 'react-router';
+import { addList } from '../../redux/store';
 
 
 const ListForm = () => {
     const dispatch = useDispatch();
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-
-    const { listId } = useParams();
 
 
     const handleSubmit = e => {
