@@ -15,7 +15,7 @@ const Card = props => {
     }
 
     return (
-        <form className={styles.card} id={props.id} onSubmit= {handleSubmit}>
+        <form className={styles.card} id={props.id} onClick= {handleSubmit}>
             {props.title}
             <button>
                 <span className={"fa fa-star-o"} />
