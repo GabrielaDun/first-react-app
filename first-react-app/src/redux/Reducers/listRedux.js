@@ -5,10 +5,12 @@ export const getListById = ({ lists }, listId) => lists.find(list => list.id ===
 export const getAllLists = state => state.lists;
 
 //actions
-const ADD_LIST = 'app/lists/ADD_LIST';
-export const addList = payload => ({ type: 'ADD_LIST', payload });
+const createActionName = actionName => `app/lists/${actionName}`;
+const ADD_LIST = createActionName('ADD_LIST');
 
 // action creators
+export const addList = payload => ({ type: 'ADD_LIST', payload });
+
 const listsReducer = (statePart = [], action) => {
     switch(action.type) {
       case ADD_LIST:

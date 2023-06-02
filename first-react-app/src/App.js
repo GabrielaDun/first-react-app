@@ -10,7 +10,7 @@ import List from './components/List/List.js';
 
 const App = () => {
   return (
-    <main>
+    <main>  
       <NavBar />
       <Container>
         <Routes>

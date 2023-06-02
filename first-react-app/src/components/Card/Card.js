@@ -1,6 +1,6 @@
 import styles from './Card.module.scss';
+import { addToFavorite } from '../../redux/Reducers/cardsReducer';
 import { useDispatch } from 'react-redux';
-import { addToFavorite } from '../../redux/store';
 
 
 const Card = props => {
