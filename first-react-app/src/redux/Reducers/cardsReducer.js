@@ -14,8 +14,8 @@ const ADD_CARD = createActionName('ADD_CARD');
 const ADD_FAVORITE = createActionName('ADD_FAVORITE')
 
 // action creators
-export const addCard = payload => ({ type: 'ADD_CARD', payload });
-export const addToFavorite = payload => ({ type: 'ADD_FAVORITE', payload });
+export const addCard = payload => ({ type: ADD_CARD, payload });
+export const addToFavorite = payload => ({ type: ADD_FAVORITE, payload });
 
 const cardsReducer = (statePart = [], action) => {
     switch(action.type) {
