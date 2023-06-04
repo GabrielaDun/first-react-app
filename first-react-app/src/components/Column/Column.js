@@ -6,7 +6,6 @@ import { getFilteredCards } from '../../redux/Reducers/searchStringReducer';
 
 const Column = props => {
     const cards = useSelector(state => getFilteredCards(state, props.id));
-    console.log(cards);
     return (
         <article className={styles.column}>
             <h2 className={styles.title} title ={props.title}>
@@ -21,7 +20,6 @@ const Column = props => {
                     key={card.id} 
                     title={card.title}
                     id={card.id}
-
                 />
                 )}
             </ul>

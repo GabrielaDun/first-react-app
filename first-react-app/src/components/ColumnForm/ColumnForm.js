@@ -12,13 +12,13 @@ const ColumnForm = () => {
     const [title, setTitle] = useState('');
     let [icon, setIcon] = useState('');
     const { listId } = useParams();
-    console.log(listId)
 
     icon = icon.toLowerCase();
 
     const handleSubmit = e => {
         e.preventDefault();
         dispatch(addColumn({ title, icon, listId }));
+        console.log(title, icon, listId, addColumn )
         setTitle('');
         setIcon('');
     }

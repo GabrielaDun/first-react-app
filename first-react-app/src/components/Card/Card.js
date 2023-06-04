@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 
 const Card = props => {
     const dispatch = useDispatch();
-    console.log(props);
 
     const handleSubmit = e => {
         const cardId = props.id

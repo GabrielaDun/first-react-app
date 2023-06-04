@@ -10,7 +10,7 @@ const createActionName = actionName => `app/lists/${actionName}`;
 const ADD_SEARCH_FRAZE = createActionName('ADD_SEARCH_FRAZE');
 
 // action creators
-export const addSearchFraze = payload => ({ type: 'ADD_SEARCH_FRAZE', payload });
+export const addSearchFraze = payload => ({ type: ADD_SEARCH_FRAZE, payload });
 
 const searchStringReducer = (statePart = '', action) => {
     switch(action.type) {
