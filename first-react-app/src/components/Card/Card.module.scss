@@ -10,12 +10,15 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    button {
-        border: none;
-        background-color: transparent;
-        font-size: 14px;
-        .isfavorite {
-            color: red;
+    .buttons {
+        display: block;
+        button {
+            border: none;
+            background-color: transparent;
+            font-size: 14px;
+            .isfavorite {
+                color: red;
+            }
         }
     }
 }
