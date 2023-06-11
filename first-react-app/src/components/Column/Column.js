@@ -18,9 +18,7 @@ const Column = props => {
                 {cards.map(card => 
                 <Card 
                     key={card.id} 
-                    title={card.title}
-                    id={card.id}
-                />
+                    {...card}  />
                 )}
             </ul>
             <CardForm columnId={props.id} action={props.action}/>

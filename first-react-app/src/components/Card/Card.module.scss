@@ -16,9 +16,16 @@
             border: none;
             background-color: transparent;
             font-size: 14px;
-            .isfavorite {
-                color: red;
-            }
+        }
+        .button {
+            border: none;
+            background-color: transparent;
+            font-size: 14px;
+        }
+        .isActive {
+            color: $color-warning;
+            
         }
     }
+
 }
